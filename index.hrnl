@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Возрождение Караганды: Школа Будущего</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* Light gray background */
+            color: #2d3748; /* Darker gray for text */
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2c5282; /* Deeper blue for titles */
+            margin-bottom: 2.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #4299e1; /* Accent blue */
+            border-radius: 2px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        .hero {
+            background: linear-gradient(135deg, #4299e1 0%, #2b6cb0 100%); /* Blue gradient */
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .footer {
+            background-color: #2d3748; /* Dark gray footer */
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            margin-top: 4rem;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        .feature-item {
+            background-color: #ebf8ff; /* Light blue background for features */
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.3s ease;
+        }
+        .feature-item:hover {
+            background-color: #deeffe; /* Slightly darker hover */
+        }
+        .feature-item h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2b6cb0; /* Deep blue for feature titles */
+            margin-bottom: 1rem;
+        }
+        .contact-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 2rem;
+        }
+        .contact-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #cbd5e0;
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #e2e8f0;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .data-table caption {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c5282;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1 class="text-white">Возрождение Караганды: Школа Будущего</h1>
+            <p class="text-white-200">Превращаем заброшенное промышленное наследие в центр инновационного образования.</p>
+            <a href="#contact" class="contact-button">Связаться с нами</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="my-16">
+            <h2 class="section-title">О Проекте</h2>
+            <div class="card">
+                <p class="text-lg leading-relaxed">
+                    Наш дипломный проект представляет собой смелое и инновационное решение для одной из ключевых проблем современных индустриальных городов — заброшенных промышленных объектов. В Караганде, где обширные территории бывших заводов остаются неиспользованными, мы предлагаем уникальную концепцию: преобразование бывшего металлургического цеха в ультрасовременную образовательную среду — **Школу Будущего**.
+                </p>
+                <p class="text-lg leading-relaxed mt-6">
+                    Это не просто перестройка здания. Это глубокое переосмысление пространства, которое позволит не только рационально использовать городские ресурсы и сохранить уникальное индустриальное наследие, но и создать мощный катализатор для развития образования и социальной жизни региона. Мы демонстрируем, что адаптивное повторное использование — это фундамент для устойчивого развития, формирования прогрессивной, экологичной и комфортной среды для будущих поколений.
+                </p>
+
+                <h3 class="text-2xl font-bold text-blue-700 mt-10 mb-4 text-center">Основные Технико-Экономические Показатели Генерального Плана</h3>
+                <table class="data-table">
+                    <caption>Показатели использования территории объекта</caption>
+                    <thead>
+                        <tr>
+                            <th>Наименование показателя</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Площадь участка</td><td>1.8 га</td></tr>
+                        <tr><td>Площадь застройки</td><td>4200 м²</td></tr>
+                        <tr><td>Общая площадь здания</td><td>6200 м²</td></tr>
+                        <tr><td>Площадь озеленения</td><td>3500 м²</td></tr>
+                        <tr><td>Площадь мощения (дорожки, площадки)</td><td>2800 м²</td></tr>
+                        <tr><td>Количество этажей</td><td>2</td></tr>
+                        <tr><td>Площадь парковки</td><td>1100 м²</td></tr>
+                        <tr><td>Количество машиномест</td><td>40</td></tr>
+                        <tr><td>Плотность застройки</td><td>23.3 %</td></tr>
+                        <tr><td>Коэффициент озеленения</td><td>19.4 %</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="my-16">
+            <h2 class="section-title">Почему Именно Школа?</h2>
+            <div class="card">
+                <p class="text-lg leading-relaxed mb-6">
+                    Выбор образовательного учреждения в качестве нового функционала для такого масштабного объекта — это стратегическое решение, отвечающее насущным потребностям Караганды. Город, стремящийся к инновациям и развитию, нуждается в современной инфраструктуре для обучения и воспитания. Преобразование индустриального наследия в школу позволяет:
+                </p>
+                <ul class="list-disc list-inside text-xl leading-relaxed space-y-3">
+                    <li><strong class="text-blue-700">Качественное Образование:</strong> Обеспечить доступ к передовому образованию в уникальной, вдохновляющей архитектурной среде, способствующей креативности и нестандартному мышлению.</li>
+                    <li><strong class="text-blue-700">Развитие Района:</strong> Стимулировать комплексное развитие прилегающих территорий, привлекая новые семьи, инвестиции и малый бизнес.</li>
+                    <li><strong class="text-blue-700">Центр Инноваций:</strong> Создать динамичный центр для академических исследований, творческого развития, технических лабораторий и проектной деятельности молодёжи.</li>
+                    <li><strong class="text-blue-700">Пример Устойчивости:</strong> Ярко демонстрировать принципы устойчивого развития, экологической ответственности и бережного отношения к историческому контексту городской среды.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="my-16">
+            <h2 class="section-title">Ключевые Особенности Проекта</h2>
+            <div class="feature-grid">
+                <div class="feature-item card">
+                    <h3>Адаптивная Архитектура</h3>
+                    <p class="text-md">Гармоничное сочетание оригинального индустриального стиля с современными архитектурными решениями. Просторные, многофункциональные помещения, легко трансформируемые под разнообразные учебные и внеурочные активности.</p>
+                </div>
+                <div class="feature-item card">
+                    <h3>Энергоэффективность и Экологичность</h3>
+                    <p class="text-md">Применение передовых изоляционных материалов, умного светодиодного освещения, эффективных систем отопления, вентиляции и рекуперации тепла для минимизации эксплуатационных расходов и углеродного следа.</p>
+                </div>
+                <div class="feature-item card">
+                    <h3>Комплексная Инфраструктура</h3>
+                    <p class="text-md">На территории школы предусмотрены современные спортивные комплексы (футбольное поле, баскетбольная площадка, беговые дорожки), зоны отдыха, арт-пространства и лаборатории, обеспечивающие всестороннее развитие учащихся.</p>
+                </div>
+                <div class="feature-item card">
+                    <h3>Безопасность и Комфорт</h3>
+                    <p class="text-md">Полностью обновлённые инженерные системы (водоснабжение, электроснабжение), интегрированная система противопожарной безопасности, видеонаблюдение и контроль доступа, соответствующие всем современным нормам.</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-blue-700 mt-10 mb-4 text-center">Инженерные Системы: Электроснабжение</h3>
+            <table class="data-table">
+                <caption>Расчёт электрических нагрузок по зонам</caption>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Помещение</th>
+                        <th>Расчётная мощность, кВт</th>
+                        <th>Категория надёжности</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Выставочные залы</td><td>12.5</td><td>II</td></tr>
+                    <tr><td>2</td><td>Кафе и кухня</td><td>18.0</td><td>II</td></tr>
+                    <tr><td>3</td><td>Офисные помещения</td><td>10.0</td><td>III</td></tr>
+                    <tr><td>4</td><td>Мастерские</td><td>14.0</td><td>II</td></tr>
+                    <tr><td>5</td><td>Общественные зоны, коридоры</td><td>8.0</td><td>III</td></tr>
+                    <tr><td>6</td><td>Технические и санитарные помещения</td><td>5.0</td><td>III</td></tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-2xl font-bold text-blue-700 mt-10 mb-4 text-center">Инженерные Системы: Водоснабжение и Канализация</h3>
+            <table class="data-table">
+                <caption>Расчёт потребности в холодной и горячей воде</caption>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Помещение</th>
+                        <th>Количество пользователей</th>
+                        <th>Суточный расход воды, л</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Санузлы (1 этаж)</td><td>100</td><td>6000</td></tr>
+                    <tr><td>2</td><td>Кафе и кухня</td><td>40</td><td>3200</td></tr>
+                    <tr><td>3</td><td>Санузлы (2 этаж)</td><td>80</td><td>4800</td></tr>
+                    <tr><td>4</td><td>Арт-резиденции</td><td>20</td><td>1200</td></tr>
+                </tbody>
+            </table>
+
+            <table class="data-table">
+                <caption>Отвод сточных вод по категориям</caption>
+                <thead>
+                    <tr>
+                        <th>Источник стоков</th>
+                        <th>Тип стоков</th>
+                        <th>Среднесуточный объём, м³</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Санузлы</td><td>Бытовые</td><td>10.8</td></tr>
+                    <tr><td>Кухня кафе</td><td>Жиросодержащие</td><td>3.2</td></tr>
+                    <tr><td>Мастерские</td><td>Технические</td><td>1.5</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="my-16">
+            <h2 class="section-title">Экономическая Эффективность</h2>
+            <div class="card">
+                <p class="text-lg leading-relaxed">
+                    Проект "Школа Будущего" является не только социально значимым, но и обладает высокой экономической привлекательностью. Благодаря концепции адаптивного повторного использования, мы достигаем существенной экономии по сравнению с традиционным новым строительством.
+                </p>
+                <div class="mt-6 p-6 bg-blue-50 rounded-xl border border-blue-200 text-blue-800">
+                    <p class="font-bold text-xl mb-2">Ключевые экономические показатели:</p>
+                    <ul class="list-disc list-inside text-lg space-y-1">
+                        <li><strong class="text-blue-700">Ориентировочная стоимость проекта:</strong> 205 млн. тенге.</li>
+                        <li><strong class="text-blue-700">Срок реализации:</strong> 12-18 месяцев.</li>
+                        <li><strong class="text-blue-700">Расчётный срок окупаемости:</strong> 6-8 лет.</li>
+                        <li><strong class="text-blue-700">Экономия на строительстве:</strong> до 30-40% по сравнению с новым возведением.</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-blue-700 mt-10 mb-4 text-center">Основные Статьи Расходов</h3>
+                <table class="data-table">
+                    <caption>Структура сметных расходов проекта</caption>
+                    <thead>
+                        <tr>
+                            <th>Статья расходов</th>
+                            <th>Сметная стоимость (млн тг)</th>
+                            <th>Доля в общей смете (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Реконструкция конструкций (усиление, демонтаж)</td><td>45.0</td><td>22%</td></tr>
+                        <tr><td>Инженерные сети (отопление, водоснабжение, электрика)</td><td>38.0</td><td>18%</td></tr>
+                        <tr><td>Отделочные работы (внутренние и наружные)</td><td>28.0</td><td>14%</td></tr>
+                        <tr><td>Оборудование (мебель, техника, освещение)</td><td>22.0</td><td>11%</td></tr>
+                        <tr><td>Благоустройство территории и озеленение</td><td>15.0</td><td>7%</td></tr>
+                        <tr><td>Авторский надзор и проектные работы</td><td>10.0</td><td>5%</td></tr>
+                        <tr><td>Непредвиденные расходы (10%)</td><td>16.8</td><td>8%</td></tr>
+                        <tr><td>Прочие затраты и налоги</td><td>30.2</td><td>15%</td></tr>
+                    </tbody>
+                </table>
+
+                <p class="text-lg leading-relaxed mt-6">
+                    Проект не только создаёт новые рабочие места, но и способствует увеличению инвестиционной привлекательности всего района, стимулируя развитие малого и среднего бизнеса. Мы активно ищем партнёров и инвесторов, готовых поддержать этот важный для города и общества проект.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="my-16 text-center">
+            <h2 class="section-title">Контакты</h2>
+            <div class="card p-8">
+                <p class="text-xl mb-4">Готовы обсудить детали проекта или ответить на ваши вопросы?</p>
+                <p class="text-2xl font-bold text-blue-700">Email: asmk.top@mail.ru</p>
+                <p class="text-2xl font-bold text-blue-700 mt-2">Телефон: +7 747 809 01 81 </p>
+                <p class="text-lg mt-6">Мы открыты к сотрудничеству и готовы предоставить полную проектную документацию.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p class="text-lg">&copy; 2025 Проект "Адаптивное повторное использование" | Разработано Рыбаком Р.А.</p>
+        <p class="text-sm mt-2">Все права защищены.</p>
+    </footer>
+</body>
+</html>
